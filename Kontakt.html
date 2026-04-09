@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Louis Cole</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+    <nav>
+        <div class="logo"> Louis Cole </div>
+        <ul>>
+            <a href="index.html">Home</a>
+            <a href="Galeria.html">Galeria</a>
+            <a href="Kontakt.html">Kontakt</a>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="kontakt-section">
+        <h2>Kontakt</h2>
 
-</body>
+        <form id="kontakt-form" novalidate>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="twoj@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="temat">Temat</label>
+                <select id="temat" name="temat">
+                    <option value="">-- Wybierz --</option>
+                    <option value="wspolpraca">Współpraca</option>
+                    <option value="koncert">Koncert</option>
+                    <option value="inne">Inne</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="wiadomosc">Wiadomość</label>
+                <textarea id="wiadomosc" name="wiadomosc" rows="5" placeholder="Napisz coś..."></textarea>
+            </div>
+
+            <input type="submit" value="Wyślij">
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Strona stworzona przez Anna Maywald</p>
+</footer>
 </html>
