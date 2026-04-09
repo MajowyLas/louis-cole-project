@@ -1,25 +1,32 @@
 
 :root {
-    --bg: #0d0d0d;
+    --bg-hero: url('Louis_Cole_musician2.jpg');
     --bg-card: #1a1a1a;
     --accent: #f0c040;
-    --text: #e8e8e8;
-    --text-muted: #888;
+    --text: #03020c;
+    --text-muted: white;
     --font: 'Inter', sans-serif;
 }
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* padding nie powiększa elementu */
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
 }
 
 header {
-    background-color: var(--bg-card);
-    border-bottom: 2px splid var(--accent);
-    position:sticky;
-    top:0;
-    z-index:100;
+    background-color: transparent;  /* było: var(--bg-card) */
+    border-bottom: none;            /* było: 2px solid var(--accent) */
+    position: absolute;             /* było: sticky — teraz "leży" na zdjęciu */
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
+
 
 nav {
     max-width: 1100px;
@@ -39,20 +46,20 @@ nav {
 }
 
 nav ul {
-    list-style: none;       /* usuwa kropki z listy */
+    list-style: none;
     display: flex;
     gap: 2rem;
 }
 
 nav a {
     color: var(--text);
-    text-decoration: none;  /* usuwa podkreślenie */
+    text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s; /* płynna zmiana koloru */
+    transition: color 0.2s;
 }
 
 nav a:hover {
-    color: var(--accent);   /* złoty kolor po najechaniu */
+    color: var(--accent);
 }
 
 main {
@@ -64,10 +71,18 @@ main {
 }
 
 .hero {
-    text-align: center;
-    padding: 5rem 2rem;
-    border-bottom: 1px solid #333;
-    margin-bottom: 3rem;
+    background-image: url('Louis_Cole_musician2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .hero h1 {
