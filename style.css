@@ -1,11 +1,12 @@
 
 :root {
     --bg-hero: url('Louis_Cole_musician2.jpg');
-    --bg-card: #1a1a1a;
+    --bg-card:#ffffff;
     --accent: #f0c040;
     --text: #03020c;
     --text-muted: white;
     --font: 'Inter', sans-serif;
+
 }
 * {
     margin: 0;
@@ -18,10 +19,14 @@ html, body {
     overflow-x: hidden;
 }
 
+body{
+    margin:0;
+}
+
 header {
-    background-color: transparent;  /* było: var(--bg-card) */
-    border-bottom: none;            /* było: 2px solid var(--accent) */
-    position: absolute;             /* było: sticky — teraz "leży" na zdjęciu */
+    background-color: transparent;
+    border-bottom: 1px solid #888;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -35,13 +40,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .logo {
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--accent);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -56,6 +62,7 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
+
 }
 
 nav a:hover {
@@ -83,6 +90,7 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 
 .hero h1 {
@@ -126,7 +134,7 @@ footer {
 
 .form-group {
     display: flex;
-    flex-direction: column;  /* label nad polem, nie obok */
+    flex-direction: column;
     gap: 0.4rem;
     margin-bottom: 1.5rem;
 }
@@ -178,11 +186,11 @@ input[type="submit"]:hover {
     opacity: 0.85;
 }
 
-/* błędy walidacji — na razie niewidoczne */
+
 .error {
     color: #ff6b6b;
     font-size: 0.85rem;
-    min-height: 1rem;  /* rezerwuje miejsce żeby layout nie skakał */
+    min-height: 1rem;
 }
 
 /* komunikat sukcesu */
@@ -201,4 +209,30 @@ nav a.active {
     color: var(--accent);
     border-bottom: 2px solid var(--accent);
     padding-bottom: 2px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.photo-grid a {
+    display: block;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.03);
+    opacity: 0.85;
 }
