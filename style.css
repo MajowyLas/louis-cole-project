@@ -24,7 +24,7 @@ body{
 }
 
 header {
-    background-color: transparent;
+    background-color: white;
     border-bottom: 1px solid #888;
     position: sticky;
     width: 100%;
@@ -89,7 +89,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position:relative;
+    z-index: 1;
 
 }
 
@@ -112,7 +113,7 @@ footer {
     border-top: 2px solid var(--accent);
     text-align: center;
     padding: 1.5rem;
-    color: var(--text-muted);
+    color: #888888;
     font-size: 0.9rem;
 }
 
